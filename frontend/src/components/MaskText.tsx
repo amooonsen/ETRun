@@ -29,14 +29,14 @@ export default function MaskText({ children, visibleValue = 0.75, containerClass
   const { fontSize, weight } = text
 
   return (
-    <div ref={ref} className={`${containerClass} overflow-hidden`}>
+    <div ref={ref} className={`${containerClass} overflow-hidden leading-snug`}>
       {
           <motion.p
             variants={maskTextAnimation}
             initial="initial"
             animate={inView ? "enter" : ""}
             style={{ fontSize: fontSize }}
-            className={`font-${weight}`}
+            className={weight && `font-${weight}`}
           >{children}
           </motion.p>
       }

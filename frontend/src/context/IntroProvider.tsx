@@ -10,7 +10,6 @@ export default function IntroProvider() {
   useEffect(() => {
     const handleLoading = () => {
       document.body.style.overflow = 'hidden';
-      document.body.style.cursor = 'wait';
 
       setTimeout(() => {
         setIsLoading(false);

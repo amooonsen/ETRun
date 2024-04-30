@@ -57,7 +57,7 @@ export default function ZoomImages() {
 
 
   return (
-    <div ref={wrapper} className='wrapper' aria-hidden>
+    <div ref={wrapper} className='wrapper mt-20' aria-hidden>
       <div className='sticky'>
         {
           pictures.map(({ src, scale }, index) => (
@@ -68,6 +68,7 @@ export default function ZoomImages() {
                   fill
                   alt="image"
                   placeholder='blur'
+                  loading='lazy'
                 />
               </div>
             </motion.div>
