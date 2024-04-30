@@ -8,12 +8,24 @@ export default function IntroProvider() {
   const [isLoading, setIsLoading] = useState<boolean>(true)
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-      document.body.style.cursor = 'default'
-      window.scrollTo(0, 0);
-    }, 2000);
-  }, [])
+    const handleLoading = () => {
+      document.body.style.overflow = 'hidden';
+      document.body.style.cursor = 'wait';
+
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = 'default';
+        window.scrollTo(0, 0);
+        document.body.style.overflow = '';
+      }, 2000);
+    };
+
+    handleLoading();
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.cursor = 'default';
+    };
+  }, []);
   return (
     <AnimatePresence mode='wait'>
       {isLoading && <Intro />}
