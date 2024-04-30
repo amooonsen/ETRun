@@ -3,11 +3,15 @@ import ContentsSection from '@/components/ContentsSection';
 import MaskText from '@/components/MaskText';
 import ZoomImages from '@/components/ZoomImages';
 import Link from 'next/link';
+import Image from 'next/image';
+
+// assets
+import Image01 from '../../public/images/running_image01.jpg'
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      {/* <IntroProvider /> */}
+      <IntroProvider />
       <ContentsSection isFull>
         <h1 className='mt-12 pl-[3vw] text-[8vw] font-semibold leading-tight'>
           우리 함께 뛰어요.<br />
@@ -23,7 +27,7 @@ export default function Home() {
             weight: 'bold'
           }}
         >
-          동기 부여란 이런 것.
+          같이의 가치를 찾다.
         </MaskText>
         <MaskText
           containerClass='mt-5 col-start-5 col-end-8'
@@ -32,7 +36,7 @@ export default function Home() {
             weight: 'bold'
           }}
         >
-          더 멀리 나아가다.<br />
+          동기부여란 이런 것.<br />
           당신이 더 나아갈 수 있도록.
         </MaskText>
       </ContentsSection>
@@ -133,7 +137,7 @@ export default function Home() {
             weight: 'medium'
           }}
         > 기본적인 자세, 운동 방법, 동기부여.<br />
-          지치고 힘들 땐 함께 뛸거니까요.<br />
+          모두 처음부터 함께 뛰겠습니다.<br />
           우리는 <span className='text-[80px] font-semibold text-[#FFA500]'>이트란</span>이니까요.
         </MaskText>
         <MaskText
@@ -148,8 +152,8 @@ export default function Home() {
         </MaskText>
       </ContentsSection>
       <div className="flex justify-center">
-          <Link className='block w-48 h-14 border text-white' href='/run'>자세 보러가기</Link>
-        </div>
+        <Link className='block w-48 h-14 border text-white' href='/run'>자세 보러가기</Link>
+      </div>
       <ContentsSection layout='grid'>
         <MaskText
           containerClass='mt-20 md:col-start-2 col-end-8 col-start-1 leading-tight'
@@ -201,6 +205,55 @@ export default function Home() {
         >
           <span className='font-bold'>오늘날에도 우리는 계속해서 달리고 있습니다.</span><br /> 즉 달리기는 우리가 누구인지, 어디서 왔는지를 상기시켜 주는 행위입니다.
         </MaskText>
+      </ContentsSection>
+      <div className="flex justify-center">
+        <Link className='block w-48 h-14 border text-white' href='/course'>코스 보러가기</Link>
+      </div>
+      <ContentsSection layout='grid'>
+        <MaskText
+          containerClass='mt-20 md:col-start-2 col-end-8 col-start-1 leading-tight'
+          text={{
+            fontSize: 64,
+            weight: 'semibold'
+          }}>
+          더 알아보기.
+        </MaskText>
+        <MaskText
+          containerClass='md:col-start-3 col-start-1 col-end-9 mt-10'
+          text={{
+            fontSize: 24,
+          }}
+        >
+          언제, 어떻게, 얼마나 뛰어야 할까요?<br />
+          간편하게 알아보는 운동목적, 심박수, 그에 따른 설정값.<br/>
+        </MaskText>
+        {/* 이미지 섹션 추가 예정 */}
+        <Image
+        src={Image01}
+        width={300}
+        height={300}
+        alt='같이 뛰는 사진'
+        />
+      </ContentsSection>
+      <div className="flex justify-center">
+        <Link className='block w-48 h-14 border text-white' href='/calculate'>심박수 확인해보기</Link>
+      </div>
+      <ContentsSection layout='flex'>
+        <MaskText
+          containerClass='mt-20 md:col-start-2 col-end-8 col-start-1 leading-tight'
+          text={{
+            fontSize: 64,
+            weight: 'semibold'
+          }}>
+          런데이 소개글
+        </MaskText>
+        {/* 이미지 섹션 추가 예정 */}
+        <Image
+        src={Image01}
+        width={300}
+        height={300}
+        alt='같이 뛰는 사진'
+        />
       </ContentsSection>
       {/* <MaskText
           containerClass={{
