@@ -2,9 +2,12 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header id="header" className="flex justify-between items-center h-20 bg-teal-400 px-8">
+    <header id="header" className="flex justify-between items-center h-20 bg-teal-600 px-8">
         <h1>
-          <Link href='/'>ETRUN
+          <Link 
+          href='/'
+          className="text-[32px] font-bold"
+          >ETRUN
           </Link>
         </h1>
         <nav>

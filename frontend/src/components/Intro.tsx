@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { slideUp, opacity } from "@/constants/intro";
 
-// const words = ["달리다", "", "Courir", "Correre", "Correr", "走る", "Springa", "Laufen", "Rennen"]
 const words = ["달리다", "지속", "즐겁다", "추진력", "인내", "성취", "활력", "끈기", "행복"]
 
 export default function Intro() {
