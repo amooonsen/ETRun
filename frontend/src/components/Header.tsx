@@ -2,14 +2,14 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header id="header" className="flex justify-between items-center h-20 bg-teal-600 px-[3vw]">
+    <header id="header" className="flex justify-between items-center h-20 bg-transparent px-[3vw]">
         <h1>
           <Link 
           href='/'
           className="text-[24px] font-bold spacing tracking-widest text-white"
           >ETRUN
           </Link>
-        </h1>
+      </h1>
         <nav>
           <ul className="inline-flex gap-6 text-white">
             <li>

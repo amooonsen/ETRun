@@ -3,7 +3,6 @@
 export type TypeBenefitInfo = {
   title: string;
   description: string;
-  src: string;
-  link: string;
+  src: object;
   color: string;
 };

@@ -1,23 +1,37 @@
-import React from 'react'
+"use client"
 
+import React from 'react'
+import { useRef } from 'react';
+
+import { useScroll } from 'framer-motion';
 // constnats
-import { benefitsInfo } from '@/constants/CardText'
+import { benefitsInfo } from '@/constants/BenefitsInfo'
+// types
+import { TypeBenefitInfo } from '@/types/TypeCommon'
 
 // component
 import ParallaxCard from './ParallaxCard'
 
-// types
-import { TypeBenefitInfo } from '@/types/TypeCommon'
 
 export default function ParallaxCardContainer() {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start start', 'end end']
+  })
   return (
-    <div>
+    <div ref={container} className='col-start-1 col-end-[none]'>
       {
-        benefitsInfo.map((info:TypeBenefitInfo, i:number) => {
+        benefitsInfo.map((info: TypeBenefitInfo, i: number) => {
+          const targetScale = 1 - ( (benefitsInfo.length - i) * 0.05);
           return <ParallaxCard
             key={`card_${i}`}
-            {...info} 
-            i={i} />
+            i={i} 
+            progress={scrollYProgress} 
+            range={[i * 0.25, 1]} 
+            targetScale={targetScale}
+            {...info}
+            />
         })
       }
     </div>
