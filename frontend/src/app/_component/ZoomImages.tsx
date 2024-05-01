@@ -5,10 +5,10 @@ import { useRef } from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion'
 
 // assets
-import Image01 from '../../public/images/running_image01.jpg'
-import Image02 from '../../public/images/running_image02.jpg'
-import Image03 from '../../public/images/running_image03.jpg'
-import Image04 from '../../public/images/running_image04.jpg'
+import Image01 from '../../../public/images/running_image01.jpg'
+import Image02 from '../../../public/images/running_image02.jpg'
+import Image03 from '../../../public/images/running_image03.jpg'
+import Image04 from '../../../public/images/running_image04.jpg'
 
 export default function ZoomImages() {
   const wrapper = useRef(null)

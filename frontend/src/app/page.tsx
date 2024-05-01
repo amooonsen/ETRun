@@ -1,7 +1,7 @@
 import IntroProvider from '@/context/IntroProvider';
 import ContentsSection from '@/components/ContentsSection';
 import MaskText from '@/components/MaskText';
-import ZoomImages from '@/components/ZoomImages';
+import ZoomImages from '@/app/_component/ZoomImages';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -245,7 +245,8 @@ export default function Home() {
             fontSize: 64,
             weight: 'semibold'
           }}>
-          런데이 소개글
+          달리기를 도와줄 제일 가까운 친구.<br/>
+          런데이를 사용해보세요.
         </MaskText>
         {/* 이미지 섹션 추가 예정 */}
         <Image
