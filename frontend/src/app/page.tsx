@@ -2,6 +2,7 @@ import IntroProvider from '@/context/IntroProvider';
 import ContentsSection from '@/components/ContentsSection';
 import MaskText from '@/components/MaskText';
 import ZoomImages from '@/app/_component/ZoomImages';
+import ParallaxCardContainer from './_component/ParallaxCardContainer';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -11,7 +12,7 @@ import Image01 from '../../public/images/running_image01.jpg'
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <IntroProvider />
+      {/* <IntroProvider /> */}
       <ContentsSection isFull>
         <h1 className='mt-12 pl-[3vw] text-[8vw] font-semibold leading-tight'>
           우리 함께 뛰어요.<br />
@@ -119,6 +120,7 @@ export default function Home() {
           근력 및 지구력 향상: 달리기는 다리와 하체의 근육을 강화하며, 전반적인 근력과 체력을 향상시킵니다. 또한, 꾸준한 달리기는 폐의 기능을 향상시키고, 오래 견딜 수 있는 체력을 증가시킵니다.
           면역력 강화: 정기적인 달리기 활동은 면역계의 기능을 강화하여 감기나 독감과 같은 일반적인 질병에 대한 저항력을 높일 수 있습니다. 달리기는 또한 장기적으로 여러 만성 질환의 위험을 낮추는 데 도움을 줄 수 있습니다.
         </MaskText>
+        <ParallaxCardContainer/>
       </ContentsSection>
       <ContentsSection layout='grid' gap={{ columnGap: 28, rowGap: 24 }}>
         <MaskText
@@ -240,7 +242,7 @@ export default function Home() {
       </div>
       <ContentsSection layout='flex'>
         <MaskText
-          containerClass='mt-20 md:col-start-2 col-end-8 col-start-1 leading-tight'
+          containerClass='mt-20 md:col-start-5 col-end-8 col-start-1 leading-tight'
           text={{
             fontSize: 64,
             weight: 'semibold'
@@ -249,12 +251,12 @@ export default function Home() {
           런데이를 사용해보세요.
         </MaskText>
         {/* 이미지 섹션 추가 예정 */}
-        <Image
+        {/* <Image
         src={Image01}
         width={300}
         height={300}
-        alt='같이 뛰는 사진'
-        />
+        alt='런데이 이미지'
+        /> */}
       </ContentsSection>
       {/* <MaskText
           containerClass={{

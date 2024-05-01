@@ -1,15 +1,9 @@
 // type def
 
-export type TypographyProps = {
-  children: React.ReactNode;
-}
-
-export type TypopgraphyBlockquote = {
+export type TypeBenefitInfo = {
   title: string;
-}
-
-export type CardInfo = {
-  id: number;
-  name: string;
-  srcName: string;
-}
+  description: string;
+  src: string;
+  link: string;
+  color: string;
+};
