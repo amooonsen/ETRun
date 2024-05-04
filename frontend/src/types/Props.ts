@@ -3,6 +3,7 @@ export type LayoutProps = {
   layout?: 'grid' | 'flex';
   isFull?: boolean
   margin?: number;
+  isTransition?: boolean;
   gap?: Partial<GapType>
 }
 
