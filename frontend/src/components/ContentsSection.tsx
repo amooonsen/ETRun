@@ -13,7 +13,7 @@ export default function ContentsSection({ children, layout, gap, isFull }: Layou
 
   return (
     <section
-      className={`w-full text-[#ddd] ${fullHeightClass} ${gridClasses} ${flexClasses} ${gapClasses}`}>
+      className={`relative w-full text-[#ddd] ${fullHeightClass} ${gridClasses} ${flexClasses} ${gapClasses}`}>
       {children}
     </section>
   )

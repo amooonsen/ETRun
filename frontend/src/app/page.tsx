@@ -1,9 +1,13 @@
+// 작업용 use client
+"use client"
+
 import IntroProvider from '@/context/IntroProvider';
 import ContentsSection from '@/components/ContentsSection';
 import MaskText from '@/components/MaskText';
 import ZoomImages from '@/app/_component/ZoomImages';
 import LinkButton from '@/components/LinkButton';
 import ParallaxCardContainer from './_component/ParallaxCardContainer';
+import ChangeBackgroundOnScroll from './_component/ChangeBackgroundOnScroll';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -112,6 +116,7 @@ export default function Home() {
         <ParallaxCardContainer />
       </ContentsSection>
       <ContentsSection layout='grid'>
+        <ChangeBackgroundOnScroll/>
         <MaskText
           containerClass="mt-20 col-start-2 col-end-8"
           text={{
@@ -137,8 +142,8 @@ export default function Home() {
             fontSize: 20,
           }}
         >
-          첫 발걸음을 맞추며 <span className="font-semibold text-[#FFA500]">Easy</span> 하게.<br />
-          오늘보다는 내일이 더 <span className="font-semibold text-[#FFA500]">Better</span> 하게.<br />
+          첫 발걸음을 맞추며 <span className="md:text-[28px] text-[22px] font-semibold text-[#FFA500]">Easy</span> 하게.<br />
+          오늘보다는 내일이 더 <span className="md:text-[28px] text-[22px] font-semibold text-[#FFA500]">Better</span> 하게.<br />
           초연결은 움직여야만 이뤄집니다.
         </MaskText>
       </ContentsSection>

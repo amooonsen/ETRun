@@ -7,8 +7,11 @@ import { useScroll, useTransform, motion } from 'framer-motion'
 // assets
 import Image01 from '../../../public/images/running_image01.jpg'
 import Image02 from '../../../public/images/running_image02.jpg'
-import Image03 from '../../../public/images/running_image03.jpg'
-import Image04 from '../../../public/images/running_image04.jpg'
+import Image03 from '../../../public/images/seoul_background04.jpg'
+import Image04 from '../../../public/images/seoul_visual01.jpg'
+import Image05 from '../../../public/images/seoul_visual02.jpg'
+import Image06 from '../../../public/images/seoul_visual03.jpg'
+import Image07 from '../../../public/images/seoul_visual04.jpg'
 
 export default function ZoomImages() {
   const wrapper = useRef(null)
@@ -19,10 +22,10 @@ export default function ZoomImages() {
   })
 
   const scale4 = useTransform(scrollYProgress, [0, 1], [1, 3]);
-  const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
-  const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
-  const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
-  const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
+  const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5.5]);
+  const scale6 = useTransform(scrollYProgress, [0, 1], [1, 5]);
+  const scale8 = useTransform(scrollYProgress, [0, 1], [1, 6]);
+  const scale9 = useTransform(scrollYProgress, [0, 1], [1, 7]);
 
   const pictures = [
     {
@@ -42,15 +45,15 @@ export default function ZoomImages() {
       scale: scale5
     },
     {
-      src: Image02,
+      src: Image05,
       scale: scale6
     },
     {
-      src: Image02,
+      src: Image06,
       scale: scale8
     },
     {
-      src: Image02,
+      src: Image07,
       scale: scale9
     }
   ]
