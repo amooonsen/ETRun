@@ -17,7 +17,7 @@ import Image01 from '../../public/images/running_image01.jpg'
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between min-h-screen mb-36">
-      <IntroProvider />
+      {/* <IntroProvider /> */}
       <ContentsSection isFull>
         <HeroSection/>
       </ContentsSection>
