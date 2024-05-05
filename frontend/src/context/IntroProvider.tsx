@@ -20,7 +20,9 @@ export default function IntroProvider() {
   }, [])
   return (
     <AnimatePresence mode='wait'>
-      {isLoading && <Intro />}
+      {isLoading && <Intro
+        key={'intro-motion'}
+      />}
     </AnimatePresence>
   )
 }

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { slideUp, opacity } from "@/constants/IntroConstant";
+import { slideUp, opacity } from "@/constants/animation/IntroConstant";
 
 const words = ["달리다", "지속", "즐겁다", "추진력", "인내", "성취", "활력", "끈기", "행복"]
 

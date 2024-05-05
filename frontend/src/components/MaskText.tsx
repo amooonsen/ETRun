@@ -3,7 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { maskTextAnimation } from '@/constants/MaskTextConstant';
+import { maskTextAnimation } from '@/constants/animation/MaskTextConstant';
 
 import { TextOptions } from '@/types/Props';
 

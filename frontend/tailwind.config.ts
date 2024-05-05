@@ -19,6 +19,26 @@ const config = {
     },
     extend: {
       colors: {
+        "primary-content": "hsl(175, 83%, 82%)",
+        "primary-dark": "hsl(175, 84%, 22%)",
+        "primary-light": "hsl(175, 84%, 42%)",
+
+        "secondary-content": "hsl(265, 83%, 82%)",
+        "secondary-dark": "hsl(264, 84%, 22%)",
+        "secondary-light": "hsl(265, 84%, 42%)",
+
+        copy: "hsl(173, 11%, 15%)",
+        "copy-light": "hsl(174, 10%, 40%)",
+        "copy-lighter": "hsl(175, 10%, 55%)",
+
+        success: "hsl(120, 84%, 32%)",
+        warning: "hsl(60, 84%, 32%)",
+        error: "hsl(0, 84%, 32%)",
+
+        "success-content": "hsl(120, 83%, 82%)",
+        "warning-content": "hsl(0, 0%, 0%)",
+        "error-content": "hsl(0, 83%, 82%)",
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

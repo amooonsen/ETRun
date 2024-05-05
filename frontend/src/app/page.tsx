@@ -2,12 +2,12 @@
 "use client"
 
 import IntroProvider from '@/context/IntroProvider';
-import ContentsSection from '@/components/ContentsSection';
+import ContentsSection from '@/components/layout/ContentsSection';
 import MaskText from '@/components/MaskText';
 import ZoomImages from '@/app/_component/ZoomImages';
 import LinkButton from '@/components/LinkButton';
+import HeroSection from '@/components/HeroSection';
 import ParallaxCardContainer from './_component/ParallaxCardContainer';
-import ChangeBackgroundOnScroll from './_component/ChangeBackgroundOnScroll';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -19,10 +19,7 @@ export default function Home() {
     <main className="flex flex-col items-center justify-between min-h-screen mb-36">
       <IntroProvider />
       <ContentsSection isFull>
-        <h1 className='mt-12 pl-[3vw] text-[8vw] font-semibold leading-tight'>
-          우리 함께 뛰어요.<br />
-          <span className='text-[#FFA500]'>이트런</span>에서.
-        </h1>
+        <HeroSection/>
       </ContentsSection>
       <ContentsSection layout='grid' gap={{ columnGap: 28, rowGap: 24 }}>
         <MaskText
@@ -56,7 +53,7 @@ export default function Home() {
             fontSize: 64,
             weight: 'semibold'
           }}>
-          우리는 <span className='text-[96px] text-[#FFA500]'>달렸습니다.</span>
+          우리는 <span className='text-[96px] text-secondary-dark'>달렸습니다.</span>
         </MaskText>
         <MaskText
           containerClass='md:col-start-2 col-end-8 col-start-1'
@@ -64,7 +61,7 @@ export default function Home() {
             fontSize: 58,
             weight: 'medium'
           }}>
-          <span className='text-[#FFA500]'>문명</span>이 태동할 때 부터.
+          <span className='text-secondary-dark'>문명</span>이 태동할 때 부터.
         </MaskText>
         <MaskText
           containerClass='2xl:col-start-5 md:col-start-4 col-start-1 col-end-9 mt-20'
@@ -116,7 +113,6 @@ export default function Home() {
         <ParallaxCardContainer />
       </ContentsSection>
       <ContentsSection layout='grid'>
-        <ChangeBackgroundOnScroll/>
         <MaskText
           containerClass="mt-20 col-start-2 col-end-8"
           text={{
@@ -134,7 +130,7 @@ export default function Home() {
           }}
         > 기본적인 자세, 운동 방법, 동기부여.<br />
           모두 처음부터 함께 뛰겠습니다.<br />
-          우리는 <span className='text-[80px] font-semibold text-[#FFA500]'>이트란</span>이니까요.
+          우리는 <span className='text-[80px] font-semibold text-secondary-dark'>이트란</span>이니까요.
         </MaskText>
         <MaskText
           containerClass='mt-12 col-start-6 col-end-9'
@@ -142,8 +138,8 @@ export default function Home() {
             fontSize: 20,
           }}
         >
-          첫 발걸음을 맞추며 <span className="md:text-[28px] text-[22px] font-semibold text-[#FFA500]">Easy</span> 하게.<br />
-          오늘보다는 내일이 더 <span className="md:text-[28px] text-[22px] font-semibold text-[#FFA500]">Better</span> 하게.<br />
+          첫 발걸음을 맞추며 <span className="md:text-[28px] text-[22px] font-semibold text-secondary-dark">Easy</span> 하게.<br />
+          오늘보다는 내일이 더 <span className="md:text-[28px] text-[22px] font-semibold text-secondary-dark">Better</span> 하게.<br />
           초연결은 움직여야만 이뤄집니다.
         </MaskText>
       </ContentsSection>
