@@ -1,12 +1,14 @@
-"use client"
-
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { slideUp, opacity } from "@/constants/animation/IntroConstant";
 
 const words = ["달리다", "지속", "즐겁다", "추진력", "인내", "성취", "활력", "끈기", "행복"]
 
-export default function Intro() {
+interface IntroProps {
+  onAnimationComplete: () => void; // onAnimationComplete 함수의 타입을 정의합니다.
+}
+
+export default function Intro({ onAnimationComplete }: IntroProps) {
   const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
 
@@ -34,6 +36,7 @@ export default function Intro() {
       setIndex(index + 1)
     }, index == 0 ? 1000 : 150)
   }, [index])
+
   return (
     <motion.div variants={slideUp} initial="initial" exit="exit" className="introduction">
       {dimension.width > 0 &&
