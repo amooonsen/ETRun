@@ -44,7 +44,9 @@ export default function Home() {
         </MaskText>
       </ContentsSection>
       <ContentsSection>
+        {/* component */}
         <ZoomImages />
+        {/* component */}
       </ContentsSection>
       <ContentsSection layout='grid'>
         <MaskText
@@ -110,7 +112,9 @@ export default function Home() {
           그리하여,<br />
           우리를 뛰게 하는 자극들.
         </MaskText>
+        {/* component */}
         <ParallaxCardContainer />
+        {/* component */}
       </ContentsSection>
       <ContentsSection layout='grid'>
         <MaskText

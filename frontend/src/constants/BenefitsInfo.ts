@@ -10,7 +10,7 @@ export const benefitsInfo: TypeBenefitInfo[] = [
   {
     title: "심혈관 건강 향상",
     description: "심장을 강화하고 혈액 순환을 증가시켜 심혈관계 건강을 개선합니다. 꾸준히 달리기를 함으로써 심장 질환, 고혈압, 뇌졸중의 위험을 감소시킬 수 있습니다.",
-    src: healthLottie,
+    // src: healthLottie,
     color: "#BBACAF"
   },
   {
@@ -34,7 +34,7 @@ export const benefitsInfo: TypeBenefitInfo[] = [
   {
     title: "면역력 강화",
     description: "정기적인 달리기 활동은 면역계의 기능을 강화하여 감기나 독감과 같은 일반적인 질병에 대한 저항력을 높일 수 있습니다. 달리기는 또한 장기적으로 여러 만성 질환의 위험을 낮추는 데 도움을 줄 수 있습니다.",
-    src: testLottie,
+    // src: testLottie,
     color: "#ff0000"
   },
 ]
